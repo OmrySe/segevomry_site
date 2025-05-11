@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="עומרי שגב - סדנאות וייעוץ בארגונים בתחומי תקשורת, חדשנות, NLP, OKR ותחקור.">
+    <meta name="keywords" content="עומרי שגב, תקשורת אפקטיבית, חדשנות, NLP, OKR, תחקור, סדנאות לארגונים, פיתוח מנהלים, יזמות פנים ארגונית">
+    <meta name="author" content="Omry Segev">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>בלוג | עומרי שגב</title>
+    <link rel="stylesheet" href="css/style.css">
+
+<style>
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+    }
+
+    nav a {
+        color: white;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-open nav {
+        display: flex;
+    }
+}
+</style>
+<script>
+function toggleMenu() {
+    document.body.classList.toggle('nav-open');
+}
+</script>
+
+</head>
+<body>
+    <header>
+<div class="hamburger" onclick="toggleMenu()">☰</div><h1>בלוג / תובנות מהדרך</h1>
+    <nav>
+        <a href="index.html">דף הבית</a>
+        <a href="about.html">אודות</a>
+        <a href="services.html">סדנאות</a>
+        <a href="testimonials.html">לקוחות ממליצים</a>
+        <a href="blog.html">בלוג</a>
+        <a href="contact.html">צור קשר</a>
+    </nav>
+</header>
+
+    <section>
+        <h2>איך לגרום לאנשים להקשיב באמת?</h2>
+        <p>תקשורת זה לא רק מילים. זה היכולת שלך לגרום למישהו אחר לרצות להבין אותך. נדבר על זה כאן בקרוב.</p>
+        
+        <h2>מה הטעות הגדולה ביותר שמנהלים עושים בתקשורת?</h2>
+        <p>ספוילר: זו לא שפה גבוהה מדי – אלא חוסר הקשבה אמיתית. נרחיב בקרוב.</p>
+        
+        <h2>איך נראית פגישה שמכבדת את הזמן של כולם?</h2>
+        <p>יש דרך לפגישות קצרות, ברורות ומדויקות – וזה לא רק ״לחתוך״. טיפים בקרוב.</p>
+    </section>
+</body>
+</html>

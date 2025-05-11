@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="המלצות מלקוחות על עומרי שגב - סדנאות וייעוץ בארגונים">
+    <meta name="keywords" content="המלצות, עומרי שגב, סדנאות, ייעוץ ארגוני">
+    <meta name="author" content="Omry Segev">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>המלצות | עומרי שגב</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <nav>
+            <a href="index.html">דף הבית</a>
+            <a href="services.html">סדנאות</a>
+            <a href="testimonials.html">לקוחות ממליצים</a>
+            <a href="blog.html">בלוג</a>
+            <a href="contact.html">צור קשר</a>
+        </nav>
+        <div class="hero-content">
+            <h1>מה אומרים עליי</h1>
+            <p>לקוחות מספרים על החוויה והתוצאות</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="testimonials-intro">
+            <h2>סיפורי הצלחה</h2>
+            <p>הסיפורים האמיתיים של לקוחות שחוו שינוי משמעותי בעקבות העבודה המשותפת</p>
+        </section>
+
+        <section class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-right"></i>
+                    <p>"למרות שעברתי פגישות וסדנאות בעבר בנושא החדשנות, הסדנא שהעביר עמרי היתה מעוררת השראה באופן מיוחד. אני מאמינה כי יישום הידע והכלים שנרכשו במהלך הסדנא יובילו לשיפור בתהליכים, בתוצאות ובשביעות הרצון של העובדים ושל המטופלים."</p>
+                    <div class="testimonial-author">
+                        <h3>פרופ' חגית בריס פלדמן</h3>
+                        <p>מנהלת המכון הגנטי והמרכז הגנומי, איכילוב</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-right"></i>
+                    <p>"עמרי הציג גישות פרקטיות לקידום חדשנות במכון, תוך שימוש בדוגמאות מעוררות השראה. הוא ניהל את הסדנא בצורה מקצועית, תוך יצירת אקלים פתוח ומעורר דיון, והפגין ידע נרחב בתחום החדשנות."</p>
+                    <div class="testimonial-author">
+                        <h3>פרופ' חגית בריס פלדמן</h3>
+                        <p>מנהלת המכון הגנטי והמרכז הגנומי, איכילוב</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-right"></i>
+                    <p>"I highly recommend Omry Segev as one of our esteemed mentor and KPI workshop facilitator. His expertise in KPIs, SMART goals, and customer journey analysis greatly benefited many of our project teams. Omry's guidance helped teams find their One Metric That Matters (OMTM) and true north star as they embark on their innovation journey."</p>
+                    <div class="testimonial-author">
+                        <h3>Noemie Alliel</h3>
+                        <p>Managing Director Israel, Starburst</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>רוצים גם אתם להצטרף לסיפורי ההצלחה?</h2>
+            <p>בואו נדבר על איך אפשר לעזור גם לארגון שלכם</p>
+            <div class="cta-buttons">
+                <a href="services.html" class="secondary-button">לכל הסדנאות</a>
+                <a href="contact.html" class="primary-button">צרו קשר</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/972547871882" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2024 עומרי שגב. כל הזכויות שמורות.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('nav-open');
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
