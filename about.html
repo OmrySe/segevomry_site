@@ -1,76 +1,124 @@
-
 <!DOCTYPE html>
 <html lang="he">
 <head>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="עומרי שגב - סדנאות וייעוץ בארגונים בתחומי תקשורת, חדשנות, NLP, OKR ותחקור.">
-    <meta name="keywords" content="עומרי שגב, תקשורת אפקטיבית, חדשנות, NLP, OKR, תחקור, סדנאות לארגונים, פיתוח מנהלים, יזמות פנים ארגונית">
+    <meta name="description" content="עמרי שגב – מומחה לתהליכי שינוי ארגוניים, חדשנות וייעול תהליכים. נשוי לגילי, אבא לארי, ומאמין בכוח של אנשים ליצור שינוי.">
+    <meta name="keywords" content="חדשנות ארגונית, יוזמות עובדים, תהליכי שינוי, ייעול תהליכים, NLP, עמרי שגב, שיפור ארגוני">
     <meta name="author" content="Omry Segev">
-
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
-    <title>אודות | עומרי שגב</title>
+    <title>עמרי שגב | עליי</title>
     <link rel="stylesheet" href="css/style.css">
-
-<style>
-.hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-@media (max-width: 600px) {
-    nav {
-        display: none;
-        flex-direction: column;
-        background-color: #222;
-    }
-
-    nav a {
-        color: white;
-        padding: 10px;
-        border-bottom: 1px solid #444;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .nav-open nav {
-        display: flex;
-    }
-}
-</style>
-<script>
-function toggleMenu() {
-    document.body.classList.toggle('nav-open');
-}
-</script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-<div class="hamburger" onclick="toggleMenu()">☰</div>
-        <h1>מי אני?</h1>
-    
-    <nav>
-        <a href="index.html">דף הבית</a>
-        <a href="about.html">אודות</a>
-        <a href="services.html">סדנאות</a>
-        <a href="testimonials.html">לקוחות ממליצים</a>
-        <a href="blog.html">בלוג</a>
-        <a href="contact.html">צור קשר</a>
-    </nav>
-</header>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <div class="nav-overlay"></div>
+        <nav>
+            <a href="index.html#about">עליי</a>
+            <a href="index.html#services">השירותים</a>
+            <a href="index.html#testimonials">המלצות</a>
+            <a href="index.html#contact" class="btn-primary">שיחת היכרות</a>
+        </nav>
+        <div class="hero-content">
+            <h1>עליי</h1>
+            <p>מומחה לתהליכי שינוי ארגוניים, חדשנות וייעול תהליכים</p>
+        </div>
+    </header>
 
-    <section>
-        <p>קוראים לי עומרי, ואני אוהב לגרום לדברים לזוז. טייס מילואים, יזם, מדריך תקשורת. אני רואה את עצמי כמתווך בין רעיונות לאנשים.</p>
-        <p>אני לא מגיע ללמד תיאוריה – אלא כלים פשוטים, שמרגישים טבעיים אבל עובדים.</p>
-    </section>
+    <main>
+        <section id="about" class="about">
+            <div class="about-content">
+                <div class="about-text">
+                    <p>היי! אני עמרי, נשוי לגילי ואבא גאה לארי הקטן. אני אוהב לעזור לארגונים לצמוח דרך האנשים שלהם, ומאמין שכל ארגון יכול להשתפר משמעותית עם הכלים הנכונים.</p>
+                    <p>כמומחה לתהליכי שינוי ארגוניים, אני מתמקד ביצירת שינוי אמיתי מתוך הארגון עצמו. אני מאמין שהאנשים בתוך הארגון הם המפתח לשינוי משמעותי, ושהכלים הנכונים יכולים להניע תהליכים שיובילו לשיפור אמיתי.</p>
+                    <p>בעזרת הכלים שלי, אני מסייע לארגונים ליצור תרבות של חדשנות, לשפר תהליכים ולהניע שינוי משמעותי. אני מאמין שכל ארגון יכול להפוך למקום טוב יותר לעבוד בו, ולהשיג תוצאות טובות יותר, כשהאנשים שלו מקבלים את הכלים והתמיכה הנכונים.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/profile.jpg" alt="עמרי שגב">
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-preview">
+            <h2>רוצה לבדוק אם התהליך מתאים לארגון שלך?</h2>
+            <p>אשמח לשמוע על האתגרים שלכם ולחשוב יחד איך אפשר לעזור.</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <h3>טלפון</h3>
+                        <a href="tel:+972547871882">054-7871882</a>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <h3>אימייל</h3>
+                        <a href="mailto:omry@segevomry.com">omry@segevomry.com</a>
+                    </div>
+                    <div class="social-links-contact" style="text-align: center;">
+                        <h3>רשתות חברתיות</h3>
+                        <div class="social-icons" style="text-align: center; display: flex; justify-content: center; gap: 15px;">
+                            <a href="https://www.linkedin.com/in/omry-segev/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://wa.me/972547871882?text=היי%20עומרי,%20הגעתי%20אליך%20דרך%20האתר.%20קוראים%20לי%20..." target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/omry.segev" target="_blank"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">שם מלא</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">אימייל</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">מה מעניין אותך?</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">שלח הודעה</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links" style="text-align: center;">
+            <a href="https://www.linkedin.com/in/omry-segev/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/972547871882?text=היי%20עומרי,%20הגעתי%20אליך%20דרך%20האתר.%20קוראים%20לי%20..." target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/omry.segev" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>רוצה לבדוק אם התהליך מתאים לארגון שלך?</p>
+        <a href="index.html#contact" class="btn-primary">תיאום שיחה</a>
+        <p>&copy; 2024 עמרי שגב. כל הזכויות שמורות.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            const overlay = document.querySelector('.nav-overlay');
+            nav.classList.toggle('active');
+            if (overlay) {
+                overlay.classList.toggle('active');
+            }
+        }
+
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const hamburger = document.querySelector('.hamburger');
+            const overlay = document.querySelector('.nav-overlay');
+            
+            if (nav.classList.contains('active') && 
+                !nav.contains(event.target) && 
+                !hamburger.contains(event.target)) {
+                nav.classList.remove('active');
+                if (overlay) {
+                    overlay.classList.remove('active');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
