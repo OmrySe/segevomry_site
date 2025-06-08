@@ -10,6 +10,64 @@
     <title>עמרי שגב | תהליכי שינוי ארגוניים</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Gentle fade-in animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in-delay-1 {
+            animation-delay: 0.2s;
+        }
+        
+        .fade-in-delay-2 {
+            animation-delay: 0.4s;
+        }
+        
+        .fade-in-delay-3 {
+            animation-delay: 0.6s;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Gentle shimmer effect for CTAs */
+        .shimmer-button {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shimmer-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .shimmer-button:hover::before {
+            left: 100%;
+        }
+        
+        /* Gentle scale on hover for cards */
+        .gentle-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gentle-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,10 +80,10 @@
             <a href="#contact" class="btn-primary">שיחת היכרות</a>
         </nav>
         <div class="hero-content">
-            <h1>העובדים שלך לא צריכים עוד רעיונות</h1>
-            <p>הם צריכים את הכלים להניע תהליכים מבפנים. תהליך קצר, מדויק ומעשי – הצתת יצר היזמות, לקיחת אחריות, שיפור תהליכים והנעת שינוי ארגוני אמיתי.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">תיאום שיחה</a>
+            <h1 class="fade-in">העובדים שלך לא צריכים עוד רעיונות</h1>
+            <p class="fade-in fade-in-delay-1">הם צריכים את הכלים להניע תהליכים מבפנים. תהליך קצר, מדויק ומעשי – הצתת יצר היזמות, לקיחת אחריות, שיפור תהליכים והנעת שינוי ארגוני אמיתי.</p>
+            <div class="hero-buttons fade-in fade-in-delay-2">
+                <a href="#contact" class="btn-primary shimmer-button">תיאום שיחה</a>
                 <a href="#services" class="btn-secondary">לשירותים שלי</a>
             </div>
         </div>
@@ -34,7 +92,7 @@
     <main>
         <section id="about" class="about">
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text fade-in">
                     <p>היי! אני עומרי, נשוי לגילי ואבא גאה לארי הקטן. <br>אני מאמין שאנשים הם המפתח לצמיחה ארגונית ולא עוד טכנולוגיה, ושעם הכלים הנכונים, העובדים שלך יכולים לקחת אחריות, ליזום ולהוביל שינוי אמיתי בארגון.</p>
                     <p>אני לא מלמד מתודולוגיה, אני משנה תפיסה של אנשים. <br>אני נותן להם את הכלים ליזום ומנחה אותם להצליח בתהליך השינוי.<br>
                     חיל האוויר לימד אותי לדייק, לייעל ולשפר. <br>עולם היזמות לימד אותי לזוז מהר.<br>
@@ -42,7 +100,7 @@
                     <p>אני עוזר לארגונים לייצר שינוי תרבותי אמיתי – שמוביל לשיפור תהליכים, פתרון בעיות והנעת יוזמות עם ערך עסקי.<br>
                     לא חדשנות לשם חדשנות – אלא תוצאה מדידה דרך אנשים.</p>
                 </div>
-                <div class="about-image">
+                <div class="about-image fade-in fade-in-delay-1">
                     <img src="images/AA27648A-0CF6-400A-96C6-9D86857A4753_1_105_c.jpeg" alt="עמרי שגב">
                 </div>
             </div>
@@ -50,7 +108,7 @@
 
         <section id="services" class="services">
             <div class="services-grid">
-                <div class="service-item">
+                <div class="service-item gentle-hover fade-in">
                     <div class="service-content">
                         <h2>קורס מיני</h2>
                         <p>סדנה קצרה וממוקדת להקניית כלים בסיסיים לחדשנות ארגונית</p>
@@ -59,11 +117,11 @@
                             <li>מתאים: לכל גודל ארגון</li>
                             <li>תוצאות: הבנה בסיסית של עקרונות החדשנות</li>
                         </ul>
-                        <a href="#contact" class="btn-primary">לפרטים נוספים</a>
+                        <a href="#contact" class="btn-primary shimmer-button">לפרטים נוספים</a>
                     </div>
                 </div>
 
-                <div class="service-item">
+                <div class="service-item gentle-hover fade-in fade-in-delay-1">
                     <div class="service-content">
                         <h2>סדנה חד-יומית</h2>
                         <p>יום שלם של למידה מעשית והתנסות בכלים לחדשנות ארגונית</p>
@@ -72,11 +130,11 @@
                             <li>מתאים: צוותים של עד 20 משתתפים</li>
                             <li>תוצאות: כלים מעשיים ליישום מיידי</li>
                         </ul>
-                        <a href="#contact" class="btn-primary">לפרטים נוספים</a>
+                        <a href="#contact" class="btn-primary shimmer-button">לפרטים נוספים</a>
                     </div>
                 </div>
 
-                <div class="service-item">
+                <div class="service-item gentle-hover fade-in fade-in-delay-2">
                     <div class="service-content">
                         <h2>תהליך מעמיק</h2>
                         <p>תהליך מקיף הכולל אבחון, הכשרה וליווי לאורך זמן</p>
@@ -85,15 +143,36 @@
                             <li>מתאים: ארגונים המעוניינים בשינוי משמעותי</li>
                             <li>תוצאות: שינוי ארגוני אמיתי ומוכח</li>
                         </ul>
-                        <a href="#contact" class="btn-primary">לפרטים נוספים</a>
+                        <a href="#contact" class="btn-primary shimmer-button">לפרטים נוספים</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="clients">
+            <h2 class="fade-in">לקוחות מובילים</h2>
+            <div class="clients-grid fade-in fade-in-delay-1">
+                <div class="client-logo">
+                    <img src="images/icilov-heb.png" alt="המרכז הרפואי תל-אביב על שם סוראסקי">
+                </div>
+                
+                <div class="client-logo">
+                    <img src="images/chargeflow.png" alt="Chargeflow">
+                </div>
+                
+                <div class="client-logo">
+                    <img src="images/brainstorm.png" alt="Brainstorm IL">
+                </div>
+                
+                <div class="client-logo">
+                    <img src="images/starburst.png" alt="Starburst">
                 </div>
             </div>
         </section>
 
         <section id="testimonials" class="testimonials">
             <div class="testimonials-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card gentle-hover fade-in">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-right"></i>
                         <p>"למרות שעברתי פגישות וסדנאות בעבר בנושא החדשנות, הסדנא שהעביר עמרי היתה מעוררת השראה באופן מיוחד. אני מאמינה כי יישום הידע והכלים שנרכשו במהלך הסדנא יובילו לשיפור בתהליכים, בתוצאות ובשביעות הרצון של העובדים ושל המטופלים."</p>
@@ -103,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card gentle-hover fade-in fade-in-delay-1">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-right"></i>
                         <p>"I highly recommend Omry Segev as one of our esteemed mentor and KPI workshop facilitator. His expertise in KPIs, SMART goals, and customer journey analysis greatly benefited many of our project teams. Omry's guidance helped teams find their One Metric That Matters (OMTM) and true north star as they embark on their innovation journey."</p>
@@ -117,9 +196,9 @@
         </section>
 
         <section id="contact" class="contact-preview">
-            <h2>רוצה לבדוק אם התהליך מתאים לארגון שלך?</h2>
-            <p>אשמח לשמוע על האתגרים שלכם ולחשוב יחד איך אפשר לעזור.</p>
-            <div class="contact-container">
+            <h2 class="fade-in">רוצה לבדוק אם התהליך מתאים לארגון שלך?</h2>
+            <p class="fade-in fade-in-delay-1">אשמח לשמוע על האתגרים שלכם ולחשוב יחד איך אפשר לעזור.</p>
+            <div class="contact-container fade-in fade-in-delay-2">
                 <div class="contact-info">
                     <div class="contact-method">
                         <i class="fas fa-phone"></i>
@@ -153,7 +232,7 @@
                         <label for="message">מה מעניין אותך?</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="submit-button">שלח הודעה</button>
+                    <button type="submit" class="submit-button shimmer-button">שלח הודעה</button>
                 </form>
             </div>
         </section>
@@ -171,6 +250,30 @@
     </footer>
 
     <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in classes
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in, .fade-in-delay-1, .fade-in-delay-2, .fade-in-delay-3');
+            fadeElements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        });
+
         // Add page transition when clicking links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
