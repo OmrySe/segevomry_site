@@ -291,7 +291,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" action="#" method="POST">
+                <form class="contact-form" action="https://formspree.io/f/mzzgoeea" method="POST">
                     <div class="form-group">
                         <label for="name">שם מלא</label>
                         <input type="text" id="name" name="name" required>
@@ -306,6 +306,9 @@
                     </div>
                     <button type="submit" class="submit-button shimmer-button">שלח הודעה</button>
                 </form>
+                <div id="thank-you-message" style="display:none; text-align:center; font-size:1.3rem; margin-top:30px;">
+                    תודה! ההודעה התקבלה ואחזור אליך בהקדם.
+                </div>
             </div>
         </section>
     </main>
@@ -433,6 +436,40 @@
         // Scroll to top when page loads
         window.addEventListener('load', function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // טיפול בשליחת טופס יצירת קשר ב-AJAX ל-Formspree
+        document.addEventListener('DOMContentLoaded', function() {
+            var contactForm = document.querySelector('.contact-form');
+            var thankYou = document.getElementById('thank-you-message');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var formData = new FormData(contactForm);
+                    fetch('https://formspree.io/f/mzzgoeea', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(function(response) {
+                        if (response.ok) {
+                            contactForm.style.display = 'none';
+                            if (thankYou) {
+                                thankYou.style.display = 'block';
+                            }
+                        } else {
+                            return response.json().then(function(data) {
+                                throw new Error(data.error || 'אירעה שגיאה בשליחת הטופס.');
+                            });
+                        }
+                    })
+                    .catch(function(error) {
+                        alert('אירעה שגיאה בשליחת הטופס: ' + error.message);
+                    });
+                });
+            }
         });
     </script>
 </body>
