@@ -124,9 +124,9 @@
         <div class="nav-overlay"></div>
         <nav>
             <a href="#about">עליי</a>
-            <a href="#services">השירותים</a>
+            <a href="#services">השירותים שלי</a>
             <a href="#testimonials">המלצות</a>
-            <a href="#contact" class="btn-primary">שיחת היכרות</a>
+            <a href="#contact" class="btn-primary">לתיאום שיחת היכרות</a>
         </nav>
         <div class="hero-content">
             <div class="hero-eyebrow fade-in">הדרך האווירית</div>
@@ -470,6 +470,20 @@
                     });
                 });
             }
+        });
+
+        // סגירת תפריט המבורגר אחרי לחיצה על קישור
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('nav a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    const nav = document.querySelector('nav');
+                    const overlay = document.querySelector('.nav-overlay');
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        if (overlay) overlay.classList.remove('active');
+                    }
+                });
+            });
         });
     </script>
 </body>
