@@ -55,15 +55,13 @@
               "@type": "CourseInstance",
               "name": "סדנה ממוקדת",
               "courseMode": "onsite",
-              "courseWorkload": "PT3H",
-              "offers": { "@type": "Offer", "price": "2500", "priceCurrency": "ILS", "category": "לא כולל מע\"מ" }
+              "courseWorkload": "PT3H"
             },
             {
               "@type": "CourseInstance",
               "name": "יום סדנה מלא",
               "courseMode": "onsite",
-              "courseWorkload": "PT7H",
-              "offers": { "@type": "Offer", "price": "5000", "priceCurrency": "ILS", "category": "לא כולל מע\"מ" }
+              "courseWorkload": "PT7H"
             }
           ]
         },
@@ -92,8 +90,8 @@
             },
             {
               "@type": "Question",
-              "name": "כמה עולה הסדנה?",
-              "acceptedAnswer": { "@type": "Answer", "text": "סדנה ממוקדת של 3 שעות: 2,500 ש\"ח. יום סדנה מלא של 6 עד 7 שעות: 5,000 ש\"ח. המחירים אינם כוללים מע\"מ, והסדנה מועברת אצלכם במשרד." }
+              "name": "איך נקבע המחיר?",
+              "acceptedAnswer": { "@type": "Answer", "text": "המחיר נגזר מהפורמט שנבחר, מגודל הצוות ומהיקף ההתאמה לתהליכי המכירה שלכם. אחרי שיחת היכרות קצרה אני שולח הצעת מחיר מפורטת ומותאמת. הסדנה מועברת אצלכם במשרד." }
             }
           ]
         }
@@ -339,8 +337,16 @@
         .logos img:hover { opacity: 1; filter: grayscale(0); }
 
         /* ---------- bio ---------- */
-        .bio-grid { display: grid; grid-template-columns: 190px 1fr; gap: 36px; align-items: start; }
-        .bio-grid img { width: 100%; border-radius: 12px; }
+        .bio-grid { display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: start; }
+        .bio-grid img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            object-position: center 18%;
+            border-radius: 12px;
+            display: block;
+        }
         .bio-grid p:last-child { margin-bottom: 0; }
         .bio-grid a { color: var(--accent-dark); }
 
@@ -361,7 +367,7 @@
             padding: 26px 28px;
         }
         .price.featured .head { background: var(--accent); }
-        .price .amount { font-size: 2.3rem; font-weight: 800; line-height: 1.1; }
+        .price .amount { font-size: 1.9rem; font-weight: 800; line-height: 1.1; }
         .price .what { font-size: 0.95rem; color: rgba(255,255,255,0.82); margin-top: 4px; }
         .price .body { padding: 24px 28px 28px; flex-grow: 1; }
         .price .body ul { margin: 0; padding-right: 20px; color: var(--ink-soft); }
@@ -681,6 +687,7 @@
             </p>
         </div>
         <div class="logos">
+            <img src="images/logos/iai.png" alt="התעשייה האווירית" loading="lazy">
             <img src="images/logos/icilov-heb.png" alt="המרכז הרפואי תל-אביב, איכילוב" loading="lazy">
             <img src="images/logos/starburst.png" alt="Starburst" loading="lazy">
             <img src="images/logos/chargeflow.png" alt="Chargeflow" loading="lazy">
@@ -693,7 +700,7 @@
     <div class="wrap">
         <h2>מי מעביר את הסדנה</h2>
         <div class="bio-grid">
-            <img src="images/AA27648A-0CF6-400A-96C6-9D86857A4753_1_105_c.jpeg" alt="עומרי שגב">
+            <img src="images/omry-portrait.jpg" alt="עומרי שגב מעביר סדנה" width="760" height="1013" loading="lazy">
             <div>
                 <p>
                     <strong>עומרי שגב</strong>, מומחה לתקשורת אפקטיבית, ניתוח תהליכים ויזמות פנים ארגונית.
@@ -716,13 +723,13 @@
 
 <section class="wash">
     <div class="wrap">
-        <h2>עלות ותנאים</h2>
+        <h2>שני פורמטים</h2>
         <p class="sub">הסדנה מועברת אצלכם במשרד, ומותאמת מראש לעולם התוכן שלכם ולתהליכי המכירה שלכם.</p>
         <div class="prices">
             <div class="price">
                 <div class="head">
-                    <div class="amount">2,500 ₪</div>
-                    <div class="what">סדנה ממוקדת · 3 שעות</div>
+                    <div class="amount">3 שעות</div>
+                    <div class="what">סדנה ממוקדת</div>
                 </div>
                 <div class="body">
                     <ul>
@@ -735,8 +742,8 @@
             </div>
             <div class="price featured">
                 <div class="head">
-                    <div class="amount">5,000 ₪</div>
-                    <div class="what">יום סדנה מלא · 6–7 שעות</div>
+                    <div class="amount">יום מלא</div>
+                    <div class="what">6 עד 7 שעות</div>
                 </div>
                 <div class="body">
                     <ul>
@@ -748,7 +755,10 @@
                 </div>
             </div>
         </div>
-        <p class="vat">* המחירים אינם כוללים מע״מ. הסדנה מתאימה לצוות של עד 20 משתתפים.</p>
+        <p class="vat">
+            הסדנה מתאימה לצוות של עד 20 משתתפים. אחרי שיחת היכרות קצרה אני שולח הצעת מחיר
+            מפורטת, מותאמת לפורמט שנבחר ולגודל הצוות.
+        </p>
     </div>
 </section>
 
