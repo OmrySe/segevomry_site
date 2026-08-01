@@ -17,9 +17,7 @@
     <meta property="og:url" content="https://segevomry.com/debrief-sales.html">
     <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin>
 
     <script type="application/ld+json">
     {
@@ -100,11 +98,42 @@
     </script>
 
     <style>
+/* Heebo, self-hosted. SIL Open Font License 1.1. Variable weight axis 100-900.
+   Downloaded from Google Fonts 2026-08-01 and served from this origin so that no
+   visitor request reaches a third party. */
+
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/heebo-hebrew.woff2') format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/heebo-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/heebo-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
         :root {
             --ink: #16283f;
             --ink-soft: #3d5573;
-            --accent: #0984E3;
-            --accent-dark: #0b6bb5;
+            --accent: #0a58a8;
+            --accent-dark: #08427e;
             --gold: #c9a227;
             --paper: #ffffff;
             --wash: #f4f7fb;
@@ -190,7 +219,7 @@
         .btn-main {
             background: var(--accent);
             color: #fff;
-            box-shadow: 0 6px 20px rgba(9,132,227,0.32);
+            box-shadow: 0 6px 20px rgba(10,88,168,0.32);
         }
         .btn-main:hover { background: var(--accent-dark); transform: translateY(-2px); }
         .btn-ghost {
@@ -288,7 +317,7 @@
         .step .num {
             font-size: 1.5rem;
             font-weight: 800;
-            color: #9db3cc;
+            color: #607d9b;
             line-height: 1.2;
         }
         .step h3 { margin-bottom: 4px; }
@@ -360,7 +389,7 @@
             display: flex;
             flex-direction: column;
         }
-        .price.featured { border-color: var(--accent); box-shadow: 0 10px 34px rgba(9,132,227,0.14); }
+        .price.featured { border-color: var(--accent); box-shadow: 0 10px 34px rgba(10,88,168,0.14); }
         .price .head {
             background: var(--ink);
             color: #fff;
@@ -468,11 +497,79 @@
         @media (prefers-reduced-motion: reduce) {
             * { transition: none !important; animation: none !important; }
         }
+
+        /* ---------- accessibility ---------- */
+        .skip-link {
+            position: absolute;
+            right: 12px;
+            top: -60px;
+            z-index: 1000;
+            background: #16283f;
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 0 0 6px 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: top 0.15s ease;
+        }
+        .skip-link:focus { top: 0; color: #fff; }
+
+        :focus-visible {
+            outline: 3px solid #0a58a8;
+            outline-offset: 3px;
+            border-radius: 3px;
+        }
+        .hero :focus-visible,
+        .contact :focus-visible,
+        .topbar :focus-visible,
+        footer :focus-visible {
+            outline-color: #ffd45e;
+        }
+
+        .req { color: #b3341f; font-weight: 700; }
+        .contact .req { color: #ffb3a3; }
+
+        .form-note {
+            font-size: 0.86rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.7);
+            margin: 0;
+        }
+        .form-note a { color: #7ec8f5; }
+
+        .consent {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.6;
+        }
+        .consent input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin: 4px 0 0;
+            flex-shrink: 0;
+            accent-color: #0a58a8;
+        }
+        .consent label { margin: 0; font-size: 0.9rem; color: inherit; }
+
+        .form-error {
+            display: none;
+            background: #7a1f12;
+            border: 1px solid #b3341f;
+            color: #fff;
+            padding: 12px 14px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 <body>
 
-<div class="topbar">
+<a href="#main" class="skip-link">דלג לתוכן הראשי</a>
+
+<nav class="topbar" aria-label="ניווט ראשי">
     <div class="wrap">
         <a href="index.html" class="brand">עומרי שגב</a>
         <div>
@@ -481,7 +578,7 @@
             <a href="mailto:omry@segevomry.com">omry@segevomry.com</a>
         </div>
     </div>
-</div>
+</nav>
 
 <header class="hero">
     <div class="wrap">
@@ -499,7 +596,7 @@
     </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 
 <section>
     <div class="wrap">
@@ -820,28 +917,38 @@
                     <input type="hidden" name="_subject" value="ליד מדף סדנת תחקור למכירות">
                     <input type="hidden" name="מקור" value="debrief-sales landing page">
                     <div>
-                        <label for="name">שם מלא</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name">שם מלא <span class="req" aria-hidden="true">*</span></label>
+                        <input type="text" id="name" name="name" autocomplete="name" required aria-required="true">
                     </div>
                     <div>
                         <label for="company">חברה</label>
-                        <input type="text" id="company" name="company">
+                        <input type="text" id="company" name="company" autocomplete="organization">
                     </div>
                     <div>
                         <label for="phone">טלפון</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" required aria-required="true">
                     </div>
                     <div>
-                        <label for="email">אימייל</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email">אימייל <span class="req" aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" required aria-required="true">
                     </div>
                     <div>
                         <label for="message">כמה אנשים בצוות, ומה האתגר המרכזי שלכם היום?</label>
                         <textarea id="message" name="message" rows="3"></textarea>
                     </div>
+                    <div class="consent">
+                        <input type="checkbox" id="marketing" name="אישור דיוור" value="כן, מאשר/ת קבלת דיוור">
+                        <label for="marketing">אני מאשר/ת לקבל מעומרי שגב עדכונים ותכנים בנושא תחקור, שיפור מתמיד וסדנאות. אפשר להסיר את ההרשמה בכל עת. סימון התיבה אינו תנאי לקבלת מענה לפנייה.</label>
+                    </div>
+                    <p class="form-note">
+                        מסירת הפרטים היא בהתנדבות ואינה חובה, אך בלעדיה לא נוכל לחזור אליכם. הפרטים ישמשו
+                        למענה לפנייה בלבד, אלא אם סימנתם את התיבה למעלה. פירוט מלא, לרבות זכות העיון והתיקון,
+                        ב<a href="privacy.html">מדיניות הפרטיות</a>.
+                    </p>
+                    <div id="form-error" class="form-error" role="alert" tabindex="-1"></div>
                     <button type="submit">שליחה</button>
                 </form>
-                <div id="thanks">תודה. ההודעה התקבלה ואחזור אליכם בהקדם.</div>
+                <div id="thanks" role="status" tabindex="-1">תודה. ההודעה התקבלה ואחזור אליכם בהקדם.</div>
             </div>
         </div>
     </div>
@@ -852,31 +959,46 @@
 <footer>
     <div class="wrap">
         <div>&copy; 2026 עומרי שגב. כל הזכויות שמורות.</div>
-        <div><a href="index.html">לאתר הראשי</a></div>
+        <div>
+            <a href="index.html">לאתר הראשי</a>
+            <a href="privacy.html">מדיניות פרטיות</a>
+            <a href="accessibility.html">הצהרת נגישות</a>
+        </div>
     </div>
 </footer>
 
 <a href="#contact" class="sticky-cta">לתיאום שיחה על הסדנה</a>
 
 <script>
-    document.getElementById('lead-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        var form = e.target;
-        fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-        }).then(function (res) {
-            if (res.ok) {
-                form.style.display = 'none';
-                document.getElementById('thanks').style.display = 'block';
-            } else {
-                alert('אירעה שגיאה בשליחה. אפשר לחייג 054-7871882.');
-            }
-        }).catch(function () {
-            alert('אירעה שגיאה בשליחה. אפשר לחייג 054-7871882.');
+    (function () {
+        var form = document.getElementById('lead-form');
+        var thanks = document.getElementById('thanks');
+        var err = document.getElementById('form-error');
+        function fail(msg) {
+            err.textContent = msg;
+            err.style.display = 'block';
+            err.focus();
+        }
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            err.style.display = 'none';
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(function (res) {
+                if (res.ok) {
+                    form.style.display = 'none';
+                    thanks.style.display = 'block';
+                    thanks.focus();
+                } else {
+                    fail('לא הצלחנו לשלוח את הטופס. אפשר לחייג 054-7871882 או לכתוב ל-omry@segevomry.com.');
+                }
+            }).catch(function () {
+                fail('לא הצלחנו לשלוח את הטופס. אפשר לחייג 054-7871882 או לכתוב ל-omry@segevomry.com.');
+            });
         });
-    });
+    })();
 </script>
 
 </body>

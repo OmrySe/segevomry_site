@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>הצהרת נגישות | עומרי שגב</title>
+    <meta name="description" content="הצהרת הנגישות של אתר segevomry.com: רמת הנגישות באתר, ההתאמות שבוצעו, ודרכי פנייה לבקשת התאמה או דיווח על תקלה.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://segevomry.com/accessibility.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preload" href="fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/heebo-hebrew.woff2') format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/heebo-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+        :root { --ink: #16283f; --ink-soft: #48607d; --accent: #0a58a8; --line: #dde5ef; }
+        * { box-sizing: border-box; }
+        html { overflow-x: hidden; }
+        body {
+            margin: 0;
+            font-family: 'Heebo', Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            color: var(--ink);
+            background: #fff;
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+        a { color: var(--accent); }
+        :focus-visible { outline: 3px solid #0a58a8; outline-offset: 3px; border-radius: 3px; }
+        .topbar { background: var(--ink); color: #fff; padding: 14px 0; }
+        .topbar a { color: #fff; text-decoration: none; font-weight: 700; }
+        .topbar :focus-visible { outline-color: #ffd45e; }
+        .skip-link {
+            position: absolute; right: 12px; top: -60px; z-index: 1000;
+            background: #16283f; color: #fff; padding: 12px 22px;
+            border-radius: 0 0 6px 6px; text-decoration: none; font-weight: 700;
+            transition: top 0.15s ease;
+        }
+        .skip-link:focus { top: 0; }
+        main { padding: 56px 0 72px; }
+        h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); font-weight: 800; margin: 0 0 10px; line-height: 1.3; }
+        .updated { color: var(--ink-soft); font-size: 0.92rem; margin: 0 0 36px; }
+        h2 { font-size: 1.25rem; font-weight: 700; margin: 38px 0 12px; }
+        p { margin: 0 0 16px; }
+        ul { padding-right: 22px; margin: 0 0 16px; }
+        li { margin-bottom: 8px; }
+        .box {
+            background: #f4f7fb;
+            border-right: 4px solid var(--accent);
+            padding: 20px 24px;
+            border-radius: 0 8px 8px 0;
+            margin: 0 0 16px;
+        }
+        .box p:last-child { margin-bottom: 0; }
+        footer { background: #0f1c2e; color: rgba(255,255,255,0.6); padding: 26px 0; font-size: 0.9rem; }
+        footer a { color: rgba(255,255,255,0.8); margin-left: 18px; text-decoration: none; }
+        footer :focus-visible { outline-color: #ffd45e; }
+        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+    </style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">דלג לתוכן הראשי</a>
+
+<nav class="topbar" aria-label="ניווט ראשי">
+    <div class="wrap"><a href="/">עומרי שגב</a></div>
+</nav>
+
+<main id="main" tabindex="-1">
+    <div class="wrap">
+        <h1>הצהרת נגישות</h1>
+        <p class="updated">עודכן לאחרונה: 1 באוגוסט 2026</p>
+
+        <p>
+            אני מאמין שכל אדם זכאי לקבל את המידע והשירות שאני מציע, ללא קשר ליכולותיו.
+            העמוד הזה מפרט את מצב הנגישות באתר, את מה שנעשה בו בפועל, ואיך לפנות אליי
+            אם משהו לא עובד עבורכם.
+        </p>
+
+        <h2>מעמד האתר מבחינת התקנות</h2>
+        <div class="box">
+            <p>
+                האתר מופעל על ידי עומרי שגב, עוסק פטור מספר 203945928. לפי תקנה 35ו(ז) לתקנות
+                שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013, עוסק פטור,
+                וכן מי שמחזורו השנתי הממוצע אינו עולה על הסכום הקבוע בתקנות, פטור מביצוע התאמות
+                הנגישות לפי אותו סימן. שני התנאים מתקיימים כאן.
+            </p>
+            <p>
+                למרות הפטור, בחרתי לבצע את התאמות הנגישות המפורטות למטה, כי אתר שאי אפשר להשתמש בו
+                הוא אתר שלא עושה את העבודה שלו.
+            </p>
+        </div>
+
+        <h2>מה נעשה באתר</h2>
+        <ul>
+            <li>האתר נבנה בקוד HTML סמנטי, עם מבנה כותרות היררכי תקין וללא דילוגי רמות.</li>
+            <li>שפת האתר וכיוון הכתיבה מוגדרים בקוד, כך שקוראי מסך מקריאים עברית נכון.</li>
+            <li>לכל תמונה יש טקסט חלופי המתאר את תוכנה.</li>
+            <li>כל שדה בטופס יצירת הקשר מקושר לתווית טקסטואלית, ושדות חובה מסומנים ומוכרזים.</li>
+            <li>ניתן לנווט בכל האתר באמצעות מקלדת בלבד, עם סימון ברור וגלוי של מיקוד המקלדת.</li>
+            <li>בראש כל עמוד קיים קישור "דלג לתוכן הראשי" המאפשר לדלג על תפריט הניווט.</li>
+            <li>יחסי הניגודיות בין הטקסט לרקע נבדקו ועומדים בדרישת 4.5:1 לטקסט רגיל.</li>
+            <li>הודעות הצלחה ושגיאה בטופס מוכרזות לקוראי מסך.</li>
+            <li>האתר מותאם לצפייה בגדלי מסך שונים ולהגדלת טקסט בדפדפן.</li>
+            <li>האתר מכבד את העדפת המשתמש להפחתת אנימציות במערכת ההפעלה.</li>
+        </ul>
+
+        <h2>מה עדיין לא נגיש</h2>
+        <p>
+            האתר לא נבדק על ידי מורשה נגישות מוסמך ולא נבדק בכל תוכנות ההקראה הקיימות.
+            ייתכן שנותרו בו רכיבים שאינם נגישים במלואם. אם נתקלתם באחד, אשמח שתספרו לי,
+            ואטפל בו.
+        </p>
+
+        <h2>פנייה בנושא נגישות</h2>
+        <p>
+            נתקלתם בקושי בגלישה באתר, או שאתם זקוקים להתאמה כדי לקבל שירות או להשתתף בסדנה?
+            כתבו או התקשרו אליי ישירות, ואחזור אליכם.
+        </p>
+        <ul>
+            <li>אימייל: <a href="mailto:omry@segevomry.com">omry@segevomry.com</a></li>
+            <li>טלפון: <a href="tel:+972547871882">054-7871882</a></li>
+        </ul>
+        <p>
+            אשמח לדעת באיזה עמוד היה הקושי ומה בדיוק לא עבד, כדי שאוכל לתקן.
+            אני עונה לפניות בנושא נגישות בתוך כמה ימי עסקים.
+        </p>
+
+        <h2>הסדרי נגישות בסדנאות עצמן</h2>
+        <p>
+            הסדנאות מועברות במשרדי הלקוח, ולכן תנאי הנגישות הפיזית של המקום נקבעים על ידו.
+            מבחינתי, אשמח להתאים את אופן ההעברה לכל צורך: חומרים מוגדלים, שליחת המצגת מראש,
+            התאמת קצב, או כל דבר אחר שיעזור. אין צורך להסביר למה, מספיק לבקש.
+        </p>
+    </div>
+</main>
+
+<footer>
+    <div class="wrap">
+        <a href="/">לאתר הראשי</a>
+        <a href="privacy.html">מדיניות פרטיות</a>
+    </div>
+</footer>
+
+</body>
+</html>
